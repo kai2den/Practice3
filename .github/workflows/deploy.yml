@@ -1,5 +1,11 @@
 name: My workflow
-key: value
-list:
-  -item1
-  -item2
+on:
+  push:
+    branches:
+      - main
+jobs:
+  my-job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Say Hello
+        run: echo "Hello, from github actions!"
