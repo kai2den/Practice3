@@ -8,4 +8,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: action1
-        run: ls -la
+        run: touch myfile.txt
+
+      - name: action2
+        run: ls -la 
+         
