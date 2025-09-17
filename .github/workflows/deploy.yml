@@ -8,8 +8,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: action1
-        run: touch myfile.txt
+        uses: actions/checkout@v2
 
       - name: action2
-        run: ls -la 
-         
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          public_dir: .
